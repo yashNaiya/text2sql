@@ -1,0 +1,996 @@
+[
+  {
+    "id": "e01r",
+    "difficulty": "easy",
+    "split": "R",
+    "rows": 1,
+    "secs": 0.0,
+    "preview": [
+      [
+        99441
+      ]
+    ]
+  },
+  {
+    "id": "e01e",
+    "difficulty": "easy",
+    "split": "E",
+    "rows": 1,
+    "secs": 0.0,
+    "preview": [
+      [
+        3095
+      ]
+    ]
+  },
+  {
+    "id": "e02r",
+    "difficulty": "easy",
+    "split": "R",
+    "rows": 1,
+    "secs": 0.01,
+    "preview": [
+      [
+        625
+      ]
+    ]
+  },
+  {
+    "id": "e02e",
+    "difficulty": "easy",
+    "split": "E",
+    "rows": 1,
+    "secs": 0.01,
+    "preview": [
+      [
+        1107
+      ]
+    ]
+  },
+  {
+    "id": "e03r",
+    "difficulty": "easy",
+    "split": "R",
+    "rows": 1,
+    "secs": 0.0,
+    "preview": [
+      [
+        73
+      ]
+    ]
+  },
+  {
+    "id": "e03e",
+    "difficulty": "easy",
+    "split": "E",
+    "rows": 1,
+    "secs": 0.0,
+    "preview": [
+      [
+        611
+      ]
+    ]
+  },
+  {
+    "id": "e04r",
+    "difficulty": "easy",
+    "split": "R",
+    "rows": 1,
+    "secs": 0.01,
+    "preview": [
+      [
+        4.08642062404257
+      ]
+    ]
+  },
+  {
+    "id": "e04e",
+    "difficulty": "easy",
+    "split": "E",
+    "rows": 1,
+    "secs": 0.01,
+    "preview": [
+      [
+        120.65373901464713
+      ]
+    ]
+  },
+  {
+    "id": "e05r",
+    "difficulty": "easy",
+    "split": "R",
+    "rows": 1,
+    "secs": 0.01,
+    "preview": [
+      [
+        2251909.54
+      ]
+    ]
+  },
+  {
+    "id": "e05e",
+    "difficulty": "easy",
+    "split": "E",
+    "rows": 1,
+    "secs": 0.01,
+    "preview": [
+      [
+        16008872.12
+      ]
+    ]
+  },
+  {
+    "id": "e06r",
+    "difficulty": "easy",
+    "split": "R",
+    "rows": 1,
+    "secs": 0.0,
+    "preview": [
+      [
+        41746
+      ]
+    ]
+  },
+  {
+    "id": "e06e",
+    "difficulty": "easy",
+    "split": "E",
+    "rows": 1,
+    "secs": 0.0,
+    "preview": [
+      [
+        171
+      ]
+    ]
+  },
+  {
+    "id": "e07r",
+    "difficulty": "easy",
+    "split": "R",
+    "rows": 1,
+    "secs": 0.01,
+    "preview": [
+      [
+        6735.0
+      ]
+    ]
+  },
+  {
+    "id": "e07e",
+    "difficulty": "easy",
+    "split": "E",
+    "rows": 1,
+    "secs": 0.0,
+    "preview": [
+      [
+        40425.0
+      ]
+    ]
+  },
+  {
+    "id": "e08r",
+    "difficulty": "easy",
+    "split": "R",
+    "rows": 8,
+    "secs": 0.01,
+    "preview": [
+      [
+        "delivered"
+      ],
+      [
+        "invoiced"
+      ],
+      [
+        "shipped"
+      ]
+    ]
+  },
+  {
+    "id": "e08e",
+    "difficulty": "easy",
+    "split": "E",
+    "rows": 27,
+    "secs": 0.0,
+    "preview": [
+      [
+        "AC"
+      ],
+      [
+        "AL"
+      ],
+      [
+        "AM"
+      ]
+    ]
+  },
+  {
+    "id": "e09r",
+    "difficulty": "easy",
+    "split": "R",
+    "rows": 1,
+    "secs": 0.02,
+    "preview": [
+      [
+        45101
+      ]
+    ]
+  },
+  {
+    "id": "e09e",
+    "difficulty": "easy",
+    "split": "E",
+    "rows": 1,
+    "secs": 0.02,
+    "preview": [
+      [
+        7211
+      ]
+    ]
+  },
+  {
+    "id": "e10r",
+    "difficulty": "easy",
+    "split": "R",
+    "rows": 1,
+    "secs": 0.01,
+    "preview": [
+      [
+        57328
+      ]
+    ]
+  },
+  {
+    "id": "e10e",
+    "difficulty": "easy",
+    "split": "E",
+    "rows": 1,
+    "secs": 0.01,
+    "preview": [
+      [
+        14575
+      ]
+    ]
+  },
+  {
+    "id": "m01r",
+    "difficulty": "medium",
+    "split": "R",
+    "rows": 8,
+    "secs": 0.03,
+    "preview": [
+      [
+        "delivered",
+        96478
+      ],
+      [
+        "shipped",
+        1107
+      ],
+      [
+        "canceled",
+        625
+      ]
+    ]
+  },
+  {
+    "id": "m01e",
+    "difficulty": "medium",
+    "split": "E",
+    "rows": 27,
+    "secs": 0.01,
+    "preview": [
+      [
+        "SP",
+        41746
+      ],
+      [
+        "RJ",
+        12852
+      ],
+      [
+        "MG",
+        11635
+      ]
+    ]
+  },
+  {
+    "id": "m02r",
+    "difficulty": "medium",
+    "split": "R",
+    "rows": 1,
+    "secs": 0.02,
+    "preview": [
+      [
+        15540
+      ]
+    ]
+  },
+  {
+    "id": "m02e",
+    "difficulty": "medium",
+    "split": "E",
+    "rows": 1,
+    "secs": 0.02,
+    "preview": [
+      [
+        12852
+      ]
+    ]
+  },
+  {
+    "id": "m03r",
+    "difficulty": "medium",
+    "split": "R",
+    "rows": 5,
+    "secs": 0.24,
+    "preview": [
+      [
+        "health_beauty",
+        1258681.34
+      ],
+      [
+        "watches_gifts",
+        1205005.68
+      ],
+      [
+        "bed_bath_table",
+        1036988.68
+      ]
+    ]
+  },
+  {
+    "id": "m03e",
+    "difficulty": "medium",
+    "split": "E",
+    "rows": 3,
+    "secs": 0.08,
+    "preview": [
+      [
+        "bed_bath_table",
+        11115
+      ],
+      [
+        "health_beauty",
+        9670
+      ],
+      [
+        "sports_leisure",
+        8641
+      ]
+    ]
+  },
+  {
+    "id": "m04r",
+    "difficulty": "medium",
+    "split": "R",
+    "rows": 8,
+    "secs": 0.26,
+    "preview": [
+      [
+        "delivered",
+        4.155716524320005
+      ],
+      [
+        "approved",
+        2.5
+      ],
+      [
+        "created",
+        2.3333333333333335
+      ]
+    ]
+  },
+  {
+    "id": "m04e",
+    "difficulty": "medium",
+    "split": "E",
+    "rows": 23,
+    "secs": 0.14,
+    "preview": [
+      [
+        "RO",
+        50.91285714285714
+      ],
+      [
+        "CE",
+        46.38117021276596
+      ],
+      [
+        "PB",
+        39.18815789473685
+      ]
+    ]
+  },
+  {
+    "id": "m05r",
+    "difficulty": "medium",
+    "split": "R",
+    "rows": 12,
+    "secs": 0.04,
+    "preview": [
+      [
+        "2017-01",
+        800
+      ],
+      [
+        "2017-02",
+        1780
+      ],
+      [
+        "2017-03",
+        2682
+      ]
+    ]
+  },
+  {
+    "id": "m05e",
+    "difficulty": "medium",
+    "split": "E",
+    "rows": 9,
+    "secs": 0.19,
+    "preview": [
+      [
+        "2018-01",
+        950030.36
+      ],
+      [
+        "2018-02",
+        844178.71
+      ],
+      [
+        "2018-03",
+        983213.44
+      ]
+    ]
+  },
+  {
+    "id": "m06r",
+    "difficulty": "medium",
+    "split": "R",
+    "rows": 13,
+    "secs": 0.01,
+    "preview": [
+      [
+        "6560211a19b47992c3666cc44a7e94c0",
+        2033
+      ],
+      [
+        "4a3ca9315b744ce9f8e9374361493884",
+        1987
+      ],
+      [
+        "1f50f920176fa81dab994f9023523100",
+        1931
+      ]
+    ]
+  },
+  {
+    "id": "m06e",
+    "difficulty": "medium",
+    "split": "E",
+    "rows": 57,
+    "secs": 0.01,
+    "preview": [
+      [
+        "aca2eb7d00ea1a7b8ebd4e68314663af",
+        527
+      ],
+      [
+        "99a4788cb24856965c36a24e339b6058",
+        488
+      ],
+      [
+        "422879e10f46682990de24d770e7f83d",
+        484
+      ]
+    ]
+  },
+  {
+    "id": "m07r",
+    "difficulty": "medium",
+    "split": "R",
+    "rows": 1,
+    "secs": 0.23,
+    "preview": [
+      [
+        13221498.11
+      ]
+    ]
+  },
+  {
+    "id": "m07e",
+    "difficulty": "medium",
+    "split": "E",
+    "rows": 1,
+    "secs": 0.01,
+    "preview": [
+      [
+        10650.45
+      ]
+    ]
+  },
+  {
+    "id": "m08r",
+    "difficulty": "medium",
+    "split": "R",
+    "rows": 1,
+    "secs": 0.03,
+    "preview": [
+      [
+        12.558217098051923
+      ]
+    ]
+  },
+  {
+    "id": "m08e",
+    "difficulty": "medium",
+    "split": "E",
+    "rows": 1,
+    "secs": 0.02,
+    "preview": [
+      [
+        7826
+      ]
+    ]
+  },
+  {
+    "id": "m09r",
+    "difficulty": "medium",
+    "split": "R",
+    "rows": 5,
+    "secs": 0.13,
+    "preview": [
+      [
+        "489ae2aa008f021502940f251d4cce7f",
+        6735.0
+      ],
+      [
+        "69c590f7ffc7bf8db97190b6cb6ed62e",
+        6729.0
+      ],
+      [
+        "1bdf5e6731585cf01aa8169c7028d6ad",
+        6499.0
+      ]
+    ]
+  },
+  {
+    "id": "m09e",
+    "difficulty": "medium",
+    "split": "E",
+    "rows": 5,
+    "secs": 0.11,
+    "preview": [
+      [
+        "4869f7a5dfa277a7dca6462dcf3b52b2",
+        229472.63
+      ],
+      [
+        "53243585a1d6dc2643021fd1853d8905",
+        222776.05
+      ],
+      [
+        "4a3ca9315b744ce9f8e9374361493884",
+        200472.92
+      ]
+    ]
+  },
+  {
+    "id": "m10r",
+    "difficulty": "medium",
+    "split": "R",
+    "rows": 5,
+    "secs": 0.03,
+    "preview": [
+      [
+        "credit_card",
+        76795
+      ],
+      [
+        "boleto",
+        19784
+      ],
+      [
+        "voucher",
+        5775
+      ]
+    ]
+  },
+  {
+    "id": "m10e",
+    "difficulty": "medium",
+    "split": "E",
+    "rows": 5,
+    "secs": 0.03,
+    "preview": [
+      [
+        "credit_card",
+        12542084.19
+      ],
+      [
+        "boleto",
+        2869361.27
+      ],
+      [
+        "voucher",
+        379436.87
+      ]
+    ]
+  },
+  {
+    "id": "h01r",
+    "difficulty": "hard",
+    "split": "R",
+    "rows": 10,
+    "secs": 0.08,
+    "preview": [
+      [
+        "03caa2c082116e1d31e67e9ae3700499",
+        13440.0
+      ],
+      [
+        "736e1922ae60d0d6a89247b851902527",
+        7160.0
+      ],
+      [
+        "0812eb902a67711a1cb742b3cdaa65ae",
+        6735.0
+      ]
+    ]
+  },
+  {
+    "id": "h01e",
+    "difficulty": "hard",
+    "split": "E",
+    "rows": 10,
+    "secs": 0.22,
+    "preview": [
+      [
+        "4869f7a5dfa277a7dca6462dcf3b52b2",
+        229472.63
+      ],
+      [
+        "53243585a1d6dc2643021fd1853d8905",
+        222776.05
+      ],
+      [
+        "4a3ca9315b744ce9f8e9374361493884",
+        200472.92
+      ]
+    ]
+  },
+  {
+    "id": "h02r",
+    "difficulty": "hard",
+    "split": "R",
+    "rows": 27,
+    "secs": 0.83,
+    "preview": [
+      [
+        "AC",
+        "sports_leisure",
+        1677.46
+      ],
+      [
+        "AL",
+        "health_beauty",
+        12780.26
+      ],
+      [
+        "AM",
+        "health_beauty",
+        2776.03
+      ]
+    ]
+  },
+  {
+    "id": "h02e",
+    "difficulty": "hard",
+    "split": "E",
+    "rows": 23,
+    "secs": 0.33,
+    "preview": [
+      [
+        "AC",
+        "books_technical",
+        1
+      ],
+      [
+        "AM",
+        "telephony",
+        3
+      ],
+      [
+        "BA",
+        "telephony",
+        327
+      ]
+    ]
+  },
+  {
+    "id": "h03r",
+    "difficulty": "hard",
+    "split": "R",
+    "rows": 12,
+    "secs": 0.08,
+    "preview": [
+      [
+        "2017-01",
+        800,
+        null
+      ],
+      [
+        "2017-02",
+        1780,
+        980
+      ],
+      [
+        "2017-03",
+        2682,
+        902
+      ]
+    ]
+  },
+  {
+    "id": "h03e",
+    "difficulty": "hard",
+    "split": "E",
+    "rows": 9,
+    "secs": 0.25,
+    "preview": [
+      [
+        "2018-01",
+        950030.36,
+        null
+      ],
+      [
+        "2018-02",
+        844178.71,
+        -105851.65000000002
+      ],
+      [
+        "2018-03",
+        983213.44,
+        139034.72999999998
+      ]
+    ]
+  },
+  {
+    "id": "h04r",
+    "difficulty": "hard",
+    "split": "R",
+    "rows": 1,
+    "secs": 0.1,
+    "preview": [
+      [
+        646
+      ]
+    ]
+  },
+  {
+    "id": "h04e",
+    "difficulty": "hard",
+    "split": "E",
+    "rows": 1,
+    "secs": 0.11,
+    "preview": [
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "h05r",
+    "difficulty": "hard",
+    "split": "R",
+    "rows": 1,
+    "secs": 0.33,
+    "preview": [
+      [
+        2997
+      ]
+    ]
+  },
+  {
+    "id": "h05e",
+    "difficulty": "hard",
+    "split": "E",
+    "rows": 1,
+    "secs": 0.32,
+    "preview": [
+      [
+        3.12
+      ]
+    ]
+  },
+  {
+    "id": "h06r",
+    "difficulty": "hard",
+    "split": "R",
+    "rows": 5,
+    "secs": 0.32,
+    "preview": [
+      [
+        "AL",
+        23.93
+      ],
+      [
+        "MA",
+        19.67
+      ],
+      [
+        "PI",
+        15.97
+      ]
+    ]
+  },
+  {
+    "id": "h06e",
+    "difficulty": "hard",
+    "split": "E",
+    "rows": 3,
+    "secs": 0.08,
+    "preview": [
+      [
+        "2016",
+        1.5
+      ],
+      [
+        "2017",
+        6.63
+      ],
+      [
+        "2018",
+        9.37
+      ]
+    ]
+  },
+  {
+    "id": "h07r",
+    "difficulty": "hard",
+    "split": "R",
+    "rows": 2,
+    "secs": 0.29,
+    "preview": [
+      [
+        "late",
+        2.5664935064935066
+      ],
+      [
+        "on_time",
+        4.2937182046856845
+      ]
+    ]
+  },
+  {
+    "id": "h07e",
+    "difficulty": "hard",
+    "split": "E",
+    "rows": 5,
+    "secs": 0.29,
+    "preview": [
+      [
+        1,
+        21.31149874844478
+      ],
+      [
+        2,
+        16.660579864659613
+      ],
+      [
+        3,
+        14.259973787142492
+      ]
+    ]
+  },
+  {
+    "id": "h08r",
+    "difficulty": "hard",
+    "split": "R",
+    "rows": 3,
+    "secs": 0.21,
+    "preview": [
+      [
+        "2016",
+        4687.4800000000005
+      ],
+      [
+        "2017",
+        481755.71
+      ],
+      [
+        "2018",
+        772238.15
+      ]
+    ]
+  },
+  {
+    "id": "h08e",
+    "difficulty": "hard",
+    "split": "E",
+    "rows": 1,
+    "secs": 0.43,
+    "preview": [
+      [
+        "health_beauty",
+        772238.15
+      ]
+    ]
+  },
+  {
+    "id": "h09r",
+    "difficulty": "hard",
+    "split": "R",
+    "rows": 1,
+    "secs": 0.37,
+    "preview": [
+      [
+        "d9bd94811c3338dceb4181f3dbc0c73e",
+        4.819672131147541,
+        54
+      ]
+    ]
+  },
+  {
+    "id": "h09e",
+    "difficulty": "hard",
+    "split": "E",
+    "rows": 1,
+    "secs": 0.46,
+    "preview": [
+      [
+        "office_furniture",
+        3.4931831653823355,
+        1687
+      ]
+    ]
+  },
+  {
+    "id": "h10r",
+    "difficulty": "hard",
+    "split": "R",
+    "rows": 25,
+    "secs": 0.04,
+    "preview": [
+      [
+        "2016-09",
+        4,
+        4
+      ],
+      [
+        "2016-10",
+        324,
+        328
+      ],
+      [
+        "2016-12",
+        1,
+        329
+      ]
+    ]
+  },
+  {
+    "id": "h10e",
+    "difficulty": "hard",
+    "split": "E",
+    "rows": 24,
+    "secs": 0.31,
+    "preview": [
+      [
+        "2016-09",
+        267.36,
+        267.36
+      ],
+      [
+        "2016-10",
+        49507.66,
+        49775.020000000004
+      ],
+      [
+        "2016-12",
+        10.9,
+        49785.920000000006
+      ]
+    ]
+  }
+]

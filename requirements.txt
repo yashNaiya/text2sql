@@ -1,0 +1,8 @@
+pandas>=2.0
+numpy
+sqlglot>=25
+sentence-transformers>=3.0
+faiss-cpu
+requests
+scikit-learn   # only used by the --embedder tfidf dry-run stand-in
+pytest         # optional: tests also run with plain `python tests/test_guard.py`

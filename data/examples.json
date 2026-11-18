@@ -1,0 +1,474 @@
+[
+  {
+    "id": "e01r",
+    "question": "How many orders are there in total?",
+    "sql": "SELECT COUNT(*) FROM orders;",
+    "tables": [
+      "orders"
+    ],
+    "tags": [
+      "count"
+    ],
+    "difficulty": "easy",
+    "analyst_ok": true
+  },
+  {
+    "id": "e02r",
+    "question": "How many orders were canceled?",
+    "sql": "SELECT COUNT(*) FROM orders WHERE order_status = 'canceled';",
+    "tables": [
+      "orders"
+    ],
+    "tags": [
+      "count",
+      "filter"
+    ],
+    "difficulty": "easy",
+    "analyst_ok": true
+  },
+  {
+    "id": "e03r",
+    "question": "How many distinct product categories are there in the products table?",
+    "sql": "SELECT COUNT(DISTINCT product_category_name) FROM products;",
+    "tables": [
+      "products"
+    ],
+    "tags": [
+      "count",
+      "distinct"
+    ],
+    "difficulty": "easy",
+    "analyst_ok": true
+  },
+  {
+    "id": "e04r",
+    "question": "What is the average review score?",
+    "sql": "SELECT AVG(review_score) FROM order_reviews;",
+    "tables": [
+      "order_reviews"
+    ],
+    "tags": [
+      "avg"
+    ],
+    "difficulty": "easy",
+    "analyst_ok": true
+  },
+  {
+    "id": "e05r",
+    "question": "What is the total freight value across all order items?",
+    "sql": "SELECT SUM(freight_value) FROM order_items;",
+    "tables": [
+      "order_items"
+    ],
+    "tags": [
+      "sum"
+    ],
+    "difficulty": "easy",
+    "analyst_ok": true
+  },
+  {
+    "id": "e06r",
+    "question": "How many customers are from the state of SP?",
+    "sql": "SELECT COUNT(*) FROM customers WHERE customer_state = 'SP';",
+    "tables": [
+      "customers"
+    ],
+    "tags": [
+      "count",
+      "filter"
+    ],
+    "difficulty": "easy",
+    "analyst_ok": true
+  },
+  {
+    "id": "e07r",
+    "question": "What is the highest price of any item sold?",
+    "sql": "SELECT MAX(price) FROM order_items;",
+    "tables": [
+      "order_items"
+    ],
+    "tags": [
+      "max"
+    ],
+    "difficulty": "easy",
+    "analyst_ok": true
+  },
+  {
+    "id": "e08r",
+    "question": "List the distinct order statuses.",
+    "sql": "SELECT DISTINCT order_status FROM orders;",
+    "tables": [
+      "orders"
+    ],
+    "tags": [
+      "distinct"
+    ],
+    "difficulty": "easy",
+    "analyst_ok": true
+  },
+  {
+    "id": "e09r",
+    "question": "How many orders were placed in 2017?",
+    "sql": "SELECT COUNT(*) FROM orders WHERE strftime('%Y', order_purchase_timestamp) = '2017';",
+    "tables": [
+      "orders"
+    ],
+    "tags": [
+      "count",
+      "date_filter",
+      "strftime"
+    ],
+    "difficulty": "easy",
+    "analyst_ok": true
+  },
+  {
+    "id": "e10r",
+    "question": "How many reviews gave a score of 5?",
+    "sql": "SELECT COUNT(*) FROM order_reviews WHERE review_score = 5;",
+    "tables": [
+      "order_reviews"
+    ],
+    "tags": [
+      "count",
+      "filter"
+    ],
+    "difficulty": "easy",
+    "analyst_ok": true
+  },
+  {
+    "id": "m01r",
+    "question": "How many orders are there for each order status, from most to least?",
+    "sql": "SELECT order_status, COUNT(*) AS n FROM orders GROUP BY order_status ORDER BY n DESC;",
+    "tables": [
+      "orders"
+    ],
+    "tags": [
+      "group_by",
+      "order_limit"
+    ],
+    "difficulty": "medium",
+    "analyst_ok": true
+  },
+  {
+    "id": "m02r",
+    "question": "How many orders were placed by customers living in the city of sao paulo?",
+    "sql": "SELECT COUNT(*) FROM orders o JOIN customers c ON o.customer_id = c.customer_id WHERE c.customer_city = 'sao paulo';",
+    "tables": [
+      "customers",
+      "orders"
+    ],
+    "tags": [
+      "join",
+      "count",
+      "filter"
+    ],
+    "difficulty": "medium",
+    "analyst_ok": true
+  },
+  {
+    "id": "m03r",
+    "question": "What are the top 5 product categories by total sales revenue? Use the English category names.",
+    "sql": "SELECT t.product_category_name_english AS category, SUM(oi.price) AS revenue FROM order_items oi JOIN products p ON oi.product_id = p.product_id JOIN product_category_name_translation t ON p.product_category_name = t.product_category_name GROUP BY category ORDER BY revenue DESC, category LIMIT 5;",
+    "tables": [
+      "order_items",
+      "product_category_name_translation",
+      "products"
+    ],
+    "tags": [
+      "multi_join",
+      "group_by",
+      "order_limit",
+      "sum",
+      "category_translation"
+    ],
+    "difficulty": "medium",
+    "analyst_ok": true
+  },
+  {
+    "id": "m04r",
+    "question": "What is the average review score for each order status?",
+    "sql": "SELECT o.order_status, AVG(r.review_score) AS avg_score FROM orders o JOIN order_reviews r ON o.order_id = r.order_id GROUP BY o.order_status ORDER BY avg_score DESC, o.order_status;",
+    "tables": [
+      "order_reviews",
+      "orders"
+    ],
+    "tags": [
+      "join",
+      "group_by",
+      "avg"
+    ],
+    "difficulty": "medium",
+    "analyst_ok": true
+  },
+  {
+    "id": "m05r",
+    "question": "How many orders were placed in each month of 2017?",
+    "sql": "SELECT strftime('%Y-%m', order_purchase_timestamp) AS month, COUNT(*) AS orders FROM orders WHERE strftime('%Y', order_purchase_timestamp) = '2017' GROUP BY month ORDER BY month;",
+    "tables": [
+      "orders"
+    ],
+    "tags": [
+      "group_by",
+      "date_filter",
+      "strftime",
+      "monthly"
+    ],
+    "difficulty": "medium",
+    "analyst_ok": true
+  },
+  {
+    "id": "m06r",
+    "question": "Which sellers have sold more than 1000 items?",
+    "sql": "SELECT seller_id, COUNT(*) AS items FROM order_items GROUP BY seller_id HAVING COUNT(*) > 1000 ORDER BY items DESC, seller_id;",
+    "tables": [
+      "order_items"
+    ],
+    "tags": [
+      "group_by",
+      "having"
+    ],
+    "difficulty": "medium",
+    "analyst_ok": true
+  },
+  {
+    "id": "m07r",
+    "question": "What is the total revenue from delivered orders?",
+    "sql": "SELECT SUM(oi.price) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id WHERE o.order_status = 'delivered';",
+    "tables": [
+      "order_items",
+      "orders"
+    ],
+    "tags": [
+      "join",
+      "sum",
+      "filter"
+    ],
+    "difficulty": "medium",
+    "analyst_ok": true
+  },
+  {
+    "id": "m08r",
+    "question": "What is the average delivery time in days for delivered orders?",
+    "sql": "SELECT AVG(julianday(order_delivered_customer_date) - julianday(order_purchase_timestamp)) AS avg_days FROM orders WHERE order_status = 'delivered' AND order_delivered_customer_date IS NOT NULL;",
+    "tables": [
+      "orders"
+    ],
+    "tags": [
+      "avg",
+      "date_diff",
+      "filter"
+    ],
+    "difficulty": "medium",
+    "analyst_ok": true
+  },
+  {
+    "id": "m09r",
+    "question": "List the 5 products with the highest average selling price.",
+    "sql": "SELECT product_id, AVG(price) AS avg_price FROM order_items GROUP BY product_id ORDER BY avg_price DESC, product_id LIMIT 5;",
+    "tables": [
+      "order_items"
+    ],
+    "tags": [
+      "group_by",
+      "avg",
+      "order_limit"
+    ],
+    "difficulty": "medium",
+    "analyst_ok": true
+  },
+  {
+    "id": "m10r",
+    "question": "How many payments were made with each payment type?",
+    "sql": "SELECT payment_type, COUNT(*) AS n FROM order_payments GROUP BY payment_type ORDER BY n DESC, payment_type;",
+    "tables": [
+      "order_payments"
+    ],
+    "tags": [
+      "group_by",
+      "count"
+    ],
+    "difficulty": "medium",
+    "analyst_ok": false
+  },
+  {
+    "id": "h01r",
+    "question": "Which 10 orders have a total item value higher than the average order total?",
+    "sql": "SELECT order_id, SUM(price) AS total FROM order_items GROUP BY order_id HAVING SUM(price) > (SELECT AVG(t) FROM (SELECT SUM(price) AS t FROM order_items GROUP BY order_id)) ORDER BY total DESC, order_id LIMIT 10;",
+    "tables": [
+      "order_items"
+    ],
+    "tags": [
+      "subquery",
+      "having",
+      "group_by",
+      "order_limit"
+    ],
+    "difficulty": "hard",
+    "analyst_ok": true
+  },
+  {
+    "id": "h02r",
+    "question": "For each customer state, which product category (English name) has the highest revenue?",
+    "sql": "WITH x AS (SELECT c.customer_state AS state, t.product_category_name_english AS category, SUM(oi.price) AS revenue FROM orders o JOIN customers c ON o.customer_id = c.customer_id JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON oi.product_id = p.product_id JOIN product_category_name_translation t ON p.product_category_name = t.product_category_name GROUP BY state, category), ranked AS (SELECT state, category, revenue, ROW_NUMBER() OVER (PARTITION BY state ORDER BY revenue DESC, category) AS rn FROM x) SELECT state, category, revenue FROM ranked WHERE rn = 1 ORDER BY state;",
+    "tables": [
+      "customers",
+      "order_items",
+      "orders",
+      "product_category_name_translation",
+      "products"
+    ],
+    "tags": [
+      "cte",
+      "window",
+      "multi_join",
+      "group_by",
+      "top_per_group",
+      "category_translation"
+    ],
+    "difficulty": "hard",
+    "analyst_ok": true
+  },
+  {
+    "id": "h03r",
+    "question": "What is the month-over-month change in the number of orders during 2017?",
+    "sql": "WITH m AS (SELECT strftime('%Y-%m', order_purchase_timestamp) AS month, COUNT(*) AS n FROM orders WHERE strftime('%Y', order_purchase_timestamp) = '2017' GROUP BY month) SELECT month, n, n - LAG(n) OVER (ORDER BY month) AS change FROM m ORDER BY month;",
+    "tables": [
+      "orders"
+    ],
+    "tags": [
+      "cte",
+      "window",
+      "monthly",
+      "strftime",
+      "period_over_period"
+    ],
+    "difficulty": "hard",
+    "analyst_ok": true
+  },
+  {
+    "id": "h04r",
+    "question": "How many delivered orders have no review?",
+    "sql": "SELECT COUNT(*) FROM orders o LEFT JOIN order_reviews r ON o.order_id = r.order_id WHERE o.order_status = 'delivered' AND r.order_id IS NULL;",
+    "tables": [
+      "order_reviews",
+      "orders"
+    ],
+    "tags": [
+      "left_join_null",
+      "count",
+      "filter"
+    ],
+    "difficulty": "hard",
+    "analyst_ok": true
+  },
+  {
+    "id": "h05r",
+    "question": "How many unique customers placed more than one order?",
+    "sql": "SELECT COUNT(*) FROM (SELECT c.customer_unique_id FROM customers c JOIN orders o ON c.customer_id = o.customer_id GROUP BY c.customer_unique_id HAVING COUNT(o.order_id) > 1);",
+    "tables": [
+      "customers",
+      "orders"
+    ],
+    "tags": [
+      "subquery",
+      "having",
+      "group_by",
+      "join",
+      "unique_customer"
+    ],
+    "difficulty": "hard",
+    "analyst_ok": false
+  },
+  {
+    "id": "h06r",
+    "question": "Which 5 customer states have the highest percentage of delivered orders that arrived late?",
+    "sql": "SELECT c.customer_state, ROUND(100.0 * SUM(CASE WHEN o.order_delivered_customer_date > o.order_estimated_delivery_date THEN 1 ELSE 0 END) / COUNT(*), 2) AS late_pct FROM orders o JOIN customers c ON o.customer_id = c.customer_id WHERE o.order_status = 'delivered' AND o.order_delivered_customer_date IS NOT NULL GROUP BY c.customer_state ORDER BY late_pct DESC, c.customer_state LIMIT 5;",
+    "tables": [
+      "customers",
+      "orders"
+    ],
+    "tags": [
+      "join",
+      "case_when",
+      "percentage",
+      "group_by",
+      "order_limit",
+      "date_diff"
+    ],
+    "difficulty": "hard",
+    "analyst_ok": true
+  },
+  {
+    "id": "h07r",
+    "question": "What is the average review score for orders delivered late versus on time?",
+    "sql": "SELECT CASE WHEN o.order_delivered_customer_date > o.order_estimated_delivery_date THEN 'late' ELSE 'on_time' END AS delivery, AVG(r.review_score) AS avg_score FROM orders o JOIN order_reviews r ON o.order_id = r.order_id WHERE o.order_status = 'delivered' AND o.order_delivered_customer_date IS NOT NULL GROUP BY delivery ORDER BY delivery;",
+    "tables": [
+      "order_reviews",
+      "orders"
+    ],
+    "tags": [
+      "join",
+      "case_when",
+      "group_by",
+      "avg",
+      "date_diff"
+    ],
+    "difficulty": "hard",
+    "analyst_ok": true
+  },
+  {
+    "id": "h08r",
+    "question": "Show the total revenue per year for the health_beauty category.",
+    "sql": "SELECT strftime('%Y', o.order_purchase_timestamp) AS year, SUM(oi.price) AS revenue FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON oi.product_id = p.product_id JOIN product_category_name_translation t ON p.product_category_name = t.product_category_name WHERE t.product_category_name_english = 'health_beauty' GROUP BY year ORDER BY year;",
+    "tables": [
+      "order_items",
+      "orders",
+      "product_category_name_translation",
+      "products"
+    ],
+    "tags": [
+      "multi_join",
+      "group_by",
+      "strftime",
+      "sum",
+      "category_translation"
+    ],
+    "difficulty": "hard",
+    "analyst_ok": true
+  },
+  {
+    "id": "h09r",
+    "question": "Which seller has the highest average review score among sellers with at least 50 reviewed orders?",
+    "sql": "SELECT oi.seller_id, AVG(r.review_score) AS avg_score, COUNT(DISTINCT oi.order_id) AS orders FROM order_items oi JOIN order_reviews r ON oi.order_id = r.order_id GROUP BY oi.seller_id HAVING COUNT(DISTINCT oi.order_id) >= 50 ORDER BY avg_score DESC, orders DESC, oi.seller_id LIMIT 1;",
+    "tables": [
+      "order_items",
+      "order_reviews"
+    ],
+    "tags": [
+      "join",
+      "group_by",
+      "having",
+      "avg",
+      "order_limit"
+    ],
+    "difficulty": "hard",
+    "analyst_ok": true
+  },
+  {
+    "id": "h10r",
+    "question": "Show the cumulative number of orders by month over the whole dataset.",
+    "sql": "WITH m AS (SELECT strftime('%Y-%m', order_purchase_timestamp) AS month, COUNT(*) AS n FROM orders GROUP BY month) SELECT month, n, SUM(n) OVER (ORDER BY month) AS cumulative FROM m ORDER BY month;",
+    "tables": [
+      "orders"
+    ],
+    "tags": [
+      "cte",
+      "window",
+      "monthly",
+      "strftime",
+      "running_total"
+    ],
+    "difficulty": "hard",
+    "analyst_ok": true
+  }
+]

@@ -1,0 +1,99 @@
+{
+  "customers": {
+    "description": "One row per order-level customer record. customer_id is unique per ORDER, not per person.",
+    "columns": {
+      "customer_id": "Key used in orders.customer_id. A returning person gets a new customer_id for each order.",
+      "customer_unique_id": "Identifies the real person across orders. Use COUNT(DISTINCT customer_unique_id) to count people.",
+      "customer_zip_code_prefix": "First 5 digits of zip code, TEXT with leading zeros.",
+      "customer_city": "Lowercase, accents removed, e.g. 'sao paulo'.",
+      "customer_state": "Two-letter Brazilian state code, uppercase, e.g. 'SP', 'RJ'."
+    }
+  },
+  "orders": {
+    "description": "One row per order. Data covers 2016-09 to 2018-10 only.",
+    "columns": {
+      "order_id": "Primary key.",
+      "customer_id": "Joins to customers.customer_id.",
+      "order_status": "One of: delivered, shipped, canceled, unavailable, invoiced, processing, created, approved. 97% are delivered.",
+      "order_purchase_timestamp": "Text 'YYYY-MM-DD HH:MM:SS'. Use strftime('%Y', ...) for year, strftime('%Y-%m', ...) for month. SQLite has no YEAR().",
+      "order_approved_at": "Payment approval time, same text format. May be NULL.",
+      "order_delivered_carrier_date": "Handed to carrier. May be NULL.",
+      "order_delivered_customer_date": "Delivered to customer. NULL if not delivered.",
+      "order_estimated_delivery_date": "Promised delivery date."
+    }
+  },
+  "order_items": {
+    "description": "One row per item in an order. An order with 3 items has 3 rows. This is the table for sales and revenue.",
+    "columns": {
+      "order_id": "Joins to orders.order_id.",
+      "order_item_id": "Item sequence number within the order (1, 2, 3...), not an item key.",
+      "product_id": "Joins to products.product_id.",
+      "seller_id": "Joins to sellers.seller_id.",
+      "shipping_limit_date": "Seller's shipping deadline.",
+      "price": "Item price in BRL, excludes freight. Revenue = SUM(price).",
+      "freight_value": "Shipping cost in BRL for this item."
+    }
+  },
+  "order_payments": {
+    "description": "One or more payment rows per order (split payments).",
+    "columns": {
+      "order_id": "Joins to orders.order_id. Not unique: several rows per order are possible.",
+      "payment_sequential": "Sequence of payment methods used for the order.",
+      "payment_type": "credit_card, boleto, voucher, debit_card, or not_defined.",
+      "payment_installments": "Number of installments chosen.",
+      "payment_value": "Amount paid in BRL. Sum per order to get the order total paid."
+    }
+  },
+  "order_reviews": {
+    "description": "Customer reviews, usually one per order.",
+    "columns": {
+      "review_id": "Review key.",
+      "order_id": "Joins to orders.order_id.",
+      "review_score": "Integer 1 to 5, where 5 is best.",
+      "review_comment_title": "Free text (Portuguese), mostly NULL.",
+      "review_comment_message": "Free text (Portuguese), often NULL.",
+      "review_creation_date": "Date the review survey was sent.",
+      "review_answer_timestamp": "When the customer answered."
+    }
+  },
+  "products": {
+    "description": "Product catalog. Category names are in Portuguese.",
+    "columns": {
+      "product_id": "Primary key.",
+      "product_category_name": "Portuguese category, e.g. 'beleza_saude'. Join to product_category_name_translation for the English name. About 13 products have a category with no translation, so use LEFT JOIN when counting everything.",
+      "product_name_lenght": "Number of characters in the name (column name is misspelled in the data).",
+      "product_description_lenght": "Number of characters in the description (misspelled in the data).",
+      "product_photos_qty": "Number of photos.",
+      "product_weight_g": "Weight in grams.",
+      "product_length_cm": "Length in cm.",
+      "product_height_cm": "Height in cm.",
+      "product_width_cm": "Width in cm."
+    }
+  },
+  "sellers": {
+    "description": "Marketplace sellers.",
+    "columns": {
+      "seller_id": "Primary key.",
+      "seller_zip_code_prefix": "First 5 digits of zip, TEXT.",
+      "seller_city": "Lowercase, no accents.",
+      "seller_state": "Two-letter state code, uppercase."
+    }
+  },
+  "product_category_name_translation": {
+    "description": "Maps Portuguese category names to English.",
+    "columns": {
+      "product_category_name": "Portuguese name, joins to products.product_category_name.",
+      "product_category_name_english": "English name, e.g. 'health_beauty', 'computers_accessories', 'bed_bath_table'."
+    }
+  },
+  "geolocation": {
+    "description": "Zip code prefix to latitude/longitude. Many rows per zip prefix.",
+    "columns": {
+      "geolocation_zip_code_prefix": "TEXT zip prefix, not unique.",
+      "geolocation_lat": "Latitude.",
+      "geolocation_lng": "Longitude.",
+      "geolocation_city": "City name.",
+      "geolocation_state": "Two-letter state code."
+    }
+  }
+}

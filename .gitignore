@@ -1,0 +1,71 @@
+# ===== Large data files =====
+/data/raw/
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.csv
+*.parquet
+*.zip
+*.tar.gz
+
+# ===== Model weights / caches =====
+*.gguf
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+*.pkl
+*.joblib
+*.faiss
+*.index
+models/
+.cache/
+chroma/
+chroma_db/
+
+# ===== Secrets / credentials =====
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.*
+credentials*.json
+service-account*.json
+config.local.*
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# ===== Virtual environments =====
+.venv/
+venv/
+env/
+ENV/
+
+# ===== Logs =====
+*.log
+logs/
+
+# ===== IDE / OS =====
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini

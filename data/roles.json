@@ -1,0 +1,26 @@
+{
+  "Admin": {
+    "allowed_tables": "*",
+    "allowed_columns": "*"
+  },
+  "Analyst": {
+    "allowed_tables": [
+      "orders", "order_items", "products",
+      "product_category_name_translation", "order_reviews", "sellers", "customers"
+    ],
+    "allowed_columns": {
+      "orders": "*",
+      "order_items": "*",
+      "products": "*",
+      "product_category_name_translation": "*",
+      "order_reviews": ["review_id", "order_id", "review_score", "review_creation_date"],
+      "sellers": ["seller_id", "seller_city", "seller_state"],
+      "customers": ["customer_id", "customer_city", "customer_state"]
+    },
+    "notes": "No access to order_payments, geolocation, customer_unique_id, zip codes, or review free text."
+  },
+  "users": {
+    "alice": "Admin",
+    "bob": "Analyst"
+  }
+}
